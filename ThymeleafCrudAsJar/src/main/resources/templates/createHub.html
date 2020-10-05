@@ -1,0 +1,34 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>New Hub</title>
+</head>
+
+<body>
+	<label th:text="${msg}"/>
+	<div align="center">
+		<h1>Adding New Hub</h1>
+		<form action="#" th:action="@{/leaf/add}" method="post" th:object=${hub}>
+			<table cellpadding="7">
+				<tr>
+					<td>Hub Holder Name: </td>
+					<td><input type="text" th:field="*{hubName}"/></td>
+				</tr>
+				<tr>
+					<td>Hub Java Count: </td>
+					<td><input type="text" th:field="*{javaCount}"/></td>
+				</tr>
+				<tr>
+					<td>Hub Python Count: </td>
+					<td><input type="text" th:field="*{pythonCount}"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Add</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+</html>

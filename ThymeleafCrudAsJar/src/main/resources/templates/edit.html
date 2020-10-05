@@ -1,0 +1,35 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Editing</title>
+</head>
+
+<body>
+	<h1>Hub Edit</h1>
+	<form action="#" method="post" th:action="@{/leaf/update}" th:object=${single}>
+		<table cellpadding="7">
+				<tr>
+					<td>Hub Holder Id: </td>
+					<td><input type="text" th:field="*{hubId}" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td>Hub Holder Name: </td>
+					<td><input type="text" th:field="*{hubName}"/></td>
+				</tr>
+				<tr>
+					<td>Hub Java Count: </td>
+					<td><input type="text" th:field="*{javaCount}"/></td>
+				</tr>
+				<tr>
+					<td>Hub Python Count: </td>
+					<td><input type="text" th:field="*{pythonCount}"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Update</td>
+				</tr>
+			</table>
+	</form>
+</body>
+
+</html>
